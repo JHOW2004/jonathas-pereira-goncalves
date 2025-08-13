@@ -1,6 +1,6 @@
 import React from 'react';
 import { ChevronDown } from 'lucide-react';
-import Perfil from "../../public/perfil.png"
+import Perfil from "../../public/perfil.webp"
 
 const Hero: React.FC = () => {
   const scrollToAbout = () => {
@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-950 via-gray-950 to-black pt-20">
+    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-neutral-900 via-stone-950 to-black pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center">
           <div className="mb-8">
@@ -40,6 +40,7 @@ const Hero: React.FC = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <button 
+              id="trabalho"
               onClick={scrollToAbout}
               className="bg-gradient-to-r from-[#E70149] to-[#03E5FB] text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300"
             >
@@ -51,6 +52,7 @@ const Hero: React.FC = () => {
           <button 
             onClick={scrollToAbout}
             className="animate-bounce text-gray-400 hover:text-gray-600 transition-colors"
+            id="scrollDown"
           >
             <ChevronDown size={32} />
           </button>

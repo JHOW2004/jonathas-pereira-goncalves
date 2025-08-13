@@ -90,7 +90,7 @@ const Contact: React.FC = () => {
               </div>
             </div>
 
-            <div className="bg-rose-600 p-8 rounded-2xl text-white">
+            <div className="bg-black p-8 rounded-2xl text-white">
               <h3 className="text-2xl font-bold mb-4">Jhow Technology</h3>
               <p className="text-blue-100 mb-4">
                 Minha empresa onde criamos diversos sistemas. Já tivemos dezenas de clientes, 

@@ -1,6 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { MessageCircle, X, Send, Bot, User } from 'lucide-react';
-import ReactMarkdown from 'react-markdown';
+import React, { useState, useRef, useEffect } from "react";
+import { MessageCircle, X, Send, Bot, User } from "lucide-react";
+import ReactMarkdown from "react-markdown";
 
 interface Message {
   id: string;
@@ -13,18 +13,18 @@ const ChatBot: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
-      id: '1',
+      id: "1",
       text: `Olá! Eu sou a Carry, a IA criada pelo Jonathas. Como posso te ajudar hoje? Você poder perguntar algo sobre Jonathas ou qualquer coisa como: Como resolver problemas em um código ou dicas e ajuda para solucionar um problemas, uma curiosidade sobre um país, e etc..`,
       isUser: false,
-      timestamp: new Date()
-    }
+      timestamp: new Date(),
+    },
   ]);
-  const [inputMessage, setInputMessage] = useState('');
+  const [inputMessage, setInputMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   useEffect(() => {
@@ -38,55 +38,55 @@ const ChatBot: React.FC = () => {
       id: Date.now().toString(),
       text: inputMessage,
       isUser: true,
-      timestamp: new Date()
+      timestamp: new Date(),
     };
 
-    setMessages(prev => [...prev, userMessage]);
-    setInputMessage('');
+    setMessages((prev) => [...prev, userMessage]);
+    setInputMessage("");
     setIsLoading(true);
 
     try {
-      const response = await fetch('https://servidor-carry.vercel.app/', {
-        method: 'POST',
+      const response = await fetch("https://servidor-carry.vercel.app/", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           message: inputMessage,
-          usuario: 'Visitante do portfólio',
-          inteligencia: 'Carry AI'
-        })
+          usuario: "Visitante do portfólio",
+          inteligencia: "Carry AI",
+        }),
       });
 
       if (!response.ok) {
-        throw new Error('Erro na requisição');
+        throw new Error("Erro na requisição");
       }
 
       const data = await response.json();
-      
+
       const botMessage: Message = {
         id: (Date.now() + 1).toString(),
         text: data.message,
         isUser: false,
-        timestamp: new Date()
+        timestamp: new Date(),
       };
 
-      setMessages(prev => [...prev, botMessage]);
+      setMessages((prev) => [...prev, botMessage]);
     } catch (error) {
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
-        text: 'Desculpe, ocorreu um erro ao processar sua mensagem. Tente novamente mais tarde.',
+        text: "Desculpe, ocorreu um erro ao processar sua mensagem. Tente novamente mais tarde.",
         isUser: false,
-        timestamp: new Date()
+        timestamp: new Date(),
       };
-      setMessages(prev => [...prev, errorMessage]);
+      setMessages((prev) => [...prev, errorMessage]);
     } finally {
       setIsLoading(false);
     }
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
+    if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
       sendMessage();
     }
@@ -96,9 +96,10 @@ const ChatBot: React.FC = () => {
     <>
       {/* Chat Button */}
       <button
+        id="IA"
         onClick={() => setIsOpen(true)}
         className={`fixed bottom-6 right-6 z-50 p-4 bg-gradient-to-r from-[#E70149] to-[#03E5FB] text-white rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-110 ${
-          isOpen ? 'hidden' : 'block'
+          isOpen ? "hidden" : "block"
         }`}
       >
         <MessageCircle size={24} />
@@ -119,6 +120,7 @@ const ChatBot: React.FC = () => {
               </div>
             </div>
             <button
+              id="IaOpen"
               onClick={() => setIsOpen(false)}
               className="text-white hover:bg-white/20 p-1 rounded-full transition-colors"
             >
@@ -131,21 +133,29 @@ const ChatBot: React.FC = () => {
             {messages.map((message) => (
               <div
                 key={message.id}
-                className={`flex ${message.isUser ? 'justify-end' : 'justify-start'}`}
+                className={`flex ${
+                  message.isUser ? "justify-end" : "justify-start"
+                }`}
               >
                 <div
                   className={`max-w-[80%] p-3 rounded-lg ${
                     message.isUser
-                      ? 'bg-[#E70149] text-white'
-                      : 'bg-gray-800 text-gray-100'
+                      ? "bg-[#E70149] text-white"
+                      : "bg-gray-800 text-gray-100"
                   }`}
                 >
                   <div className="flex items-start space-x-2">
                     {!message.isUser && (
-                      <Bot size={16} className="text-[#03E5FB] mt-1 flex-shrink-0" />
+                      <Bot
+                        size={16}
+                        className="text-[#03E5FB] mt-1 flex-shrink-0"
+                      />
                     )}
                     {message.isUser && (
-                      <User size={16} className="text-white mt-1 flex-shrink-0" />
+                      <User
+                        size={16}
+                        className="text-white mt-1 flex-shrink-0"
+                      />
                     )}
                     <div className="flex-1">
                       {message.isUser ? (
@@ -154,17 +164,35 @@ const ChatBot: React.FC = () => {
                         <div className="text-sm prose prose-invert max-w-none">
                           <ReactMarkdown
                             components={{
-                              p: ({ children }) => <p className="mb-2 last:mb-0">{children}</p>,
-                              strong: ({ children }) => <strong className="text-[#03E5FB]">{children}</strong>,
-                              em: ({ children }) => <em className="text-[#E70149]">{children}</em>,
+                              p: ({ children }) => (
+                                <p className="mb-2 last:mb-0">{children}</p>
+                              ),
+                              strong: ({ children }) => (
+                                <strong className="text-[#03E5FB]">
+                                  {children}
+                                </strong>
+                              ),
+                              em: ({ children }) => (
+                                <em className="text-[#E70149]">{children}</em>
+                              ),
                               code: ({ children }) => (
                                 <code className="bg-gray-700 px-1 py-0.5 rounded text-[#03E5FB]">
                                   {children}
                                 </code>
                               ),
-                              ul: ({ children }) => <ul className="list-disc list-inside mb-2">{children}</ul>,
-                              ol: ({ children }) => <ol className="list-decimal list-inside mb-2">{children}</ol>,
-                              li: ({ children }) => <li className="mb-1">{children}</li>
+                              ul: ({ children }) => (
+                                <ul className="list-disc list-inside mb-2">
+                                  {children}
+                                </ul>
+                              ),
+                              ol: ({ children }) => (
+                                <ol className="list-decimal list-inside mb-2">
+                                  {children}
+                                </ol>
+                              ),
+                              li: ({ children }) => (
+                                <li className="mb-1">{children}</li>
+                              ),
                             }}
                           >
                             {message.text}

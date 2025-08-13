@@ -1,6 +1,6 @@
 import React from 'react';
 import { Menu, X, Github, Linkedin, Mail, Phone } from 'lucide-react';
-import Logo from "../../public/LOGO JHOW_Prancheta 1 cópia 6.png"
+import Logo from "../../public/LOGO JHOW_Prancheta 1 cópia 6 1.webp"
 
 interface HeaderProps {
   isMenuOpen: boolean;
@@ -24,6 +24,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
             <img 
               src={Logo}
               alt="Jhow Technology Logo" 
+              fetchpriority="high"
               className="h-10 w-auto"
             />
             <button onClick={() => scrollToSection('about')} className="text-gray-200 hover:text-blue-600 transition-colors">
@@ -68,6 +69,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
 
           {/* Mobile menu button */}
           <button
+            id="menu"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors"
           >
