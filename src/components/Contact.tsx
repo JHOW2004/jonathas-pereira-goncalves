@@ -12,7 +12,7 @@ const Contact: React.FC = () => {
     const message = (form.message as HTMLTextAreaElement).value;
 
     const phoneNumber = "5514988168763";
-    const whatsappMessage = `Nome: ${name}\nEmail: ${email}\nAssunto: ${subject}\n\nMensagem: ${message}`;
+    const whatsappMessage = `Nome: ${name}\nEmail: ${email}\nAssunto: ${subject}\n\n${message}`;
     const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       whatsappMessage
     )}`;
