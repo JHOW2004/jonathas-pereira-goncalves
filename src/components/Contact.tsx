@@ -12,9 +12,11 @@ const Contact: React.FC = () => {
     const subject = (form.subject as HTMLInputElement).value;
     const message = (form.message as HTMLTextAreaElement).value;
 
-    const mailtoLink = `mailto:jonathaspereira673@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Nome: ${name}\nEmail: ${email}\n\n${message}`)}`;
+    const phoneNumber = '5514988168763';
+    const whatsappMessage = `Nome: ${name}\nEmail: ${email}\nAssunto: ${subject}\n\nMensagem: ${message}`;
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
-    window.location.href = mailtoLink;
+    window.open(whatsappLink, '_blank');
   };
 
   return (
@@ -179,9 +181,10 @@ const Contact: React.FC = () => {
 
               <button
                 type="submit"
+                aria-label="Enviar Mensagem"
                 className="w-full bg-gradient-to-r from-[#E70149] to-[#03E5FB] text-white py-4 px-6 rounded-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300"
               >
-                Enviar Mensagem
+                Enviar Mensagem no WhatsApp
               </button>
             </form>
           </div>

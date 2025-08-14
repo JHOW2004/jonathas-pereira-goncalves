@@ -97,6 +97,7 @@ const ChatBot: React.FC = () => {
       {/* Chat Button */}
       <button
         id="IA"
+        aria-label="IA"
         onClick={() => setIsOpen(true)}
         className={`fixed bottom-6 right-6 z-50 p-4 bg-gradient-to-r from-[#E70149] to-[#03E5FB] text-white rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-110 ${
           isOpen ? "hidden" : "block"
@@ -121,6 +122,7 @@ const ChatBot: React.FC = () => {
             </div>
             <button
               id="IaOpen"
+              aria-label="IA Open"
               onClick={() => setIsOpen(false)}
               className="text-white hover:bg-white/20 p-1 rounded-full transition-colors"
             >
@@ -235,6 +237,7 @@ const ChatBot: React.FC = () => {
               />
               <button
                 onClick={sendMessage}
+                aria-label="SendMenssage"
                 disabled={!inputMessage.trim() || isLoading}
                 className="px-4 py-2 bg-gradient-to-r from-[#E70149] to-[#03E5FB] text-white rounded-lg hover:from-[#E70149]/90 hover:to-[#03E5FB]/90 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
               >

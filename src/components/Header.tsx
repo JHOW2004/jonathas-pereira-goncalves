@@ -27,26 +27,30 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
               fetchpriority="high"
               className="h-10 w-auto"
             />
-            <button onClick={() => scrollToSection('about')} className="text-gray-200 hover:text-blue-600 transition-colors">
-              Jhow Tecnology
+            <button
+                aria-label="Ir para a seção Sobre"
+                onClick={() => scrollToSection('about')}
+                className="text-gray-200 hover:text-blue-600 transition-colors"
+            >
+              Jhow Technology
             </button>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <button onClick={() => scrollToSection('home')} className="text-gray-200 hover:text-blue-600 transition-colors">
+            <button aria-label="Ir para a seção Início" onClick={() => scrollToSection('home')} className="text-gray-200 hover:text-blue-600 transition-colors">
               Início
             </button>
-            <button onClick={() => scrollToSection('about')} className="text-gray-200 hover:text-blue-600 transition-colors">
+            <button aria-label="Ir para a seção Sobre" onClick={() => scrollToSection('about')} className="text-gray-200 hover:text-blue-600 transition-colors">
               Sobre
             </button>
-            <button onClick={() => scrollToSection('experience')} className="text-gray-200 hover:text-blue-600 transition-colors">
+            <button aria-label="Ir para a seção Experiência" onClick={() => scrollToSection('experience')} className="text-gray-200 hover:text-blue-600 transition-colors">
               Experiência
             </button>
-            <button onClick={() => scrollToSection('skills')} className="text-gray-200 hover:text-blue-600 transition-colors">
+            <button aria-label="Ir para a seção Habilidades" onClick={() => scrollToSection('skills')} className="text-gray-200 hover:text-blue-600 transition-colors">
               Habilidades
             </button>
-            <button onClick={() => scrollToSection('contact')} className="text-gray-200 hover:text-blue-600 transition-colors">
+            <button aria-label="Ir para a seção Contato" onClick={() => scrollToSection('contact')} className="text-gray-200 hover:text-blue-600 transition-colors">
               Contato
             </button>
           </nav>
@@ -54,16 +58,16 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
           {/* Social Links */}
           <div className="hidden md:flex items-center space-x-4">
             <a href="https://github.com/JHOW2004" target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-gray-900 transition-colors">
-              <Github size={20} />
+              <Github size={20} aria-label="GitHub" />
             </a>
             <a href="https://www.linkedin.com/in/jonathas-pereira-gon%C3%A7alves-abb045211" target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-blue-600 transition-colors">
-              <Linkedin size={20} />
+              <Linkedin size={20} aria-label="LinkedIn" />
             </a>
             <a href="mailto:jonathaspereira673@gmail.com" className="text-gray-200 hover:text-red-600 transition-colors">
-              <Mail size={20} />
+              <Mail size={20}  aria-label="Email"/>
             </a>
             <a href="tel:+5514988168763" className="text-gray-200 hover:text-green-600 transition-colors">
-              <Phone size={20} />
+              <Phone size={20} aria-label="Telefone"/>
             </a>
           </div>
 
@@ -72,6 +76,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
             id="menu"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors"
+            aria-label={isMenuOpen ? "Fechar Menu" : "Abrir Menu"}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -81,35 +86,35 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200">
             <nav className="flex flex-col space-y-4">
-              <button onClick={() => scrollToSection('home')} className="text-left text-gray-200 hover:text-blue-600 transition-colors">
+              <button aria-label="Ir para a seção Início" onClick={() => scrollToSection('home')} className="text-left text-gray-200 hover:text-blue-600 transition-colors">
                 Início
               </button>
-              <button onClick={() => scrollToSection('about')} className="text-left text-gray-200 hover:text-blue-600 transition-colors">
+              <button aria-label="Ir para a seção Sobre" onClick={() => scrollToSection('about')} className="text-left text-gray-200 hover:text-blue-600 transition-colors">
                 Sobre
               </button>
-              <button onClick={() => scrollToSection('experience')} className="text-left text-gray-200 hover:text-blue-600 transition-colors">
+              <button aria-label="Ir para a seção Experiência" onClick={() => scrollToSection('experience')} className="text-left text-gray-200 hover:text-blue-600 transition-colors">
                 Experiência
               </button>
-              <button onClick={() => scrollToSection('skills')} className="text-left text-gray-200 hover:text-blue-600 transition-colors">
+              <button aria-label="Ir para a seção Habilidades" onClick={() => scrollToSection('skills')} className="text-left text-gray-200 hover:text-blue-600 transition-colors">
                 Habilidades
               </button>
-              <button onClick={() => scrollToSection('contact')} className="text-left text-gray-200 hover:text-blue-600 transition-colors">
+              <button aria-label="Ir para a seção Contato" onClick={() => scrollToSection('contact')} className="text-left text-gray-200 hover:text-blue-600 transition-colors">
                 Contato
               </button>
             </nav>
             
             <div className="flex items-center space-x-4 mt-4 pt-4 border-t border-gray-200">
-              <a href="https://github.com/JHOW2004" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-colors">
-                <Github size={20} />
+              <a href="https://github.com/JHOW2004" target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-gray-900 transition-colors">
+                <Github size={20} aria-label="GitHub" />
               </a>
-              <a href="https://www.linkedin.com/in/jonathas-pereira-gon%C3%A7alves-abb045211" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition-colors">
-                <Linkedin size={20} />
+              <a href="https://www.linkedin.com/in/jonathas-pereira-gon%C3%A7alves-abb045211" target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-blue-600 transition-colors">
+                <Linkedin size={20} aria-label="LinkedIn" />
               </a>
-              <a href="mailto:jonathaspereira673@gmail.com" className="text-gray-600 hover:text-red-600 transition-colors">
-                <Mail size={20} />
+              <a href="mailto:jonathaspereira673@gmail.com" className="text-gray-200 hover:text-red-600 transition-colors">
+                <Mail size={20} aria-label="Email" />
               </a>
-              <a href="tel:+5514988168763" className="text-gray-600 hover:text-green-600 transition-colors">
-                <Phone size={20} />
+              <a href="tel:+5514988168763" className="text-gray-200 hover:text-green-600 transition-colors">
+                <Phone size={20} aria-label="Telefone" />
               </a>
             </div>
           </div>

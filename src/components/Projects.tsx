@@ -53,7 +53,7 @@ const Projects: React.FC = () => {
             Meus <span className="text-[#E70149]">Projetos</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-[#E70149] to-[#03E5FB] mx-auto mb-8"></div>
-          <p className="text-gray-200 text-lg max-w-3xl mx-auto">
+          <p className="text-gray-100 text-lg max-w-3xl mx-auto">
             Alguns dos projetos pessoais que desenvolvi, demonstrando minha
             paixão por inovação e tecnologia. Cada projeto representa uma
             solução única para problemas reais.
@@ -119,7 +119,7 @@ const Projects: React.FC = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <div className="bg-gray-900/50 p-8 rounded-xl border border-gray-800">
+          <div className="p-8 rounded-xl border border-gray-800">
             <h3 className="text-2xl font-bold text-white mb-4">
               Projetos Empresariais
             </h3>
