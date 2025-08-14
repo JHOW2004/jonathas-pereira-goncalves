@@ -1,8 +1,7 @@
-import React from 'react';
-import { Mail, Phone, MapPin, Github, Linkedin, Building } from 'lucide-react';
+import React from "react";
+import { Mail, Phone, MapPin, Github, Linkedin, Building } from "lucide-react";
 
 const Contact: React.FC = () => {
-
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
 
@@ -12,11 +11,13 @@ const Contact: React.FC = () => {
     const subject = (form.subject as HTMLInputElement).value;
     const message = (form.message as HTMLTextAreaElement).value;
 
-    const phoneNumber = '5514988168763';
+    const phoneNumber = "5514988168763";
     const whatsappMessage = `Nome: ${name}\nEmail: ${email}\nAssunto: ${subject}\n\nMensagem: ${message}`;
-    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      whatsappMessage
+    )}`;
 
-    window.open(whatsappLink, '_blank');
+    window.open(whatsappLink, "_blank");
   };
 
   return (
@@ -24,11 +25,15 @@ const Contact: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Entre em <span className="bg-gradient-to-r from-[#E70149] to-[#03E5FB] bg-clip-text text-transparent">Contato</span>
+            Entre em{" "}
+            <span className="bg-gradient-to-r from-[#E70149] to-[#03E5FB] bg-clip-text text-transparent">
+              Contato
+            </span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-[#E70149] to-[#03E5FB] mx-auto rounded-full"></div>
           <p className="text-lg text-gray-600 mt-6 max-w-2xl mx-auto">
-            Vamos conversar sobre seu próximo projeto? Estou sempre aberto a novas oportunidades e desafios.
+            Vamos conversar sobre seu próximo projeto? Estou sempre aberto a
+            novas oportunidades e desafios.
           </p>
         </div>
 
@@ -36,7 +41,9 @@ const Contact: React.FC = () => {
           {/* Contact Info */}
           <div className="space-y-8">
             <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Informações de Contato</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                Informações de Contato
+              </h3>
 
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
@@ -45,7 +52,11 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Email</h4>
-                    <a href="mailto:jonathaspereira673@gmail.com" className="text-gray-600 hover:text-blue-600 transition-colors">
+                    <a
+                      href="mailto:jonathaspereira673@gmail.com"
+                      aria-label="Email"
+                      className="text-gray-600 hover:text-blue-600 transition-colors"
+                    >
                       jonathaspereira673@gmail.com
                     </a>
                   </div>
@@ -57,7 +68,11 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Telefone</h4>
-                    <a href="tel:+5514988168763" className="text-gray-600 hover:text-green-600 transition-colors">
+                    <a
+                      href="tel:+5514988168763"
+                      aria-label="Telefone"
+                      className="text-gray-600 hover:text-green-600 transition-colors"
+                    >
                       +55 14 988168763
                     </a>
                   </div>
@@ -85,11 +100,14 @@ const Contact: React.FC = () => {
               </div>
 
               <div className="mt-8 pt-8 border-t border-gray-200">
-                <h4 className="font-semibold text-gray-900 mb-4">Redes Sociais</h4>
+                <h4 className="font-semibold text-gray-900 mb-4">
+                  Redes Sociais
+                </h4>
                 <div className="flex gap-4">
                   <a
                     href="https://github.com/JHOW2004"
                     target="_blank"
+                    aria-label="Github"
                     rel="noopener noreferrer"
                     className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-gray-900 hover:text-white transition-all duration-300"
                   >
@@ -99,6 +117,7 @@ const Contact: React.FC = () => {
                     href="https://www.linkedin.com/in/jonathas-pereira-gon%C3%A7alves-abb045211"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Linkedin"
                     className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all duration-300"
                   >
                     <Linkedin size={20} />
@@ -110,12 +129,14 @@ const Contact: React.FC = () => {
             <div className="bg-black p-8 rounded-2xl text-white">
               <h3 className="text-2xl font-bold mb-4">Jhow Technology</h3>
               <p className="text-blue-100 mb-4">
-                Minha empresa onde criamos diversos sistemas. Já tivemos dezenas de clientes,
-                sendo o maior deles o Sebrae no projeto ALI Academy.
+                Minha empresa onde criamos diversos sistemas. Já tivemos dezenas
+                de clientes, sendo o maior deles o Sebrae no projeto ALI
+                Academy.
               </p>
               <div className="bg-white/20 p-4 rounded-lg">
                 <p className="text-sm text-blue-100">
-                  Especializada em desenvolvimento de sistemas web, mobile e soluções em nuvem.
+                  Especializada em desenvolvimento de sistemas web, mobile e
+                  soluções em nuvem.
                 </p>
               </div>
             </div>
@@ -123,12 +144,17 @@ const Contact: React.FC = () => {
 
           {/* Contact Form */}
           <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Envie uma Mensagem</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              Envie uma Mensagem
+            </h3>
 
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Nome
                   </label>
                   <input
@@ -140,7 +166,10 @@ const Contact: React.FC = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Email
                   </label>
                   <input
@@ -154,7 +183,10 @@ const Contact: React.FC = () => {
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                <label
+                  htmlFor="subject"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
                   Assunto
                 </label>
                 <input
@@ -167,7 +199,10 @@ const Contact: React.FC = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
                   Mensagem
                 </label>
                 <textarea

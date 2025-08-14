@@ -57,16 +57,16 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
 
           {/* Social Links */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="https://github.com/JHOW2004" target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-gray-900 transition-colors">
+            <a href="https://github.com/JHOW2004" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-gray-200 hover:text-gray-900 transition-colors">
               <Github size={20} aria-label="GitHub" />
             </a>
-            <a href="https://www.linkedin.com/in/jonathas-pereira-gon%C3%A7alves-abb045211" target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-blue-600 transition-colors">
+            <a href="https://www.linkedin.com/in/jonathas-pereira-gon%C3%A7alves-abb045211" aria-label="Linkedin" target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-blue-600 transition-colors">
               <Linkedin size={20} aria-label="LinkedIn" />
             </a>
-            <a href="mailto:jonathaspereira673@gmail.com" className="text-gray-200 hover:text-red-600 transition-colors">
+            <a href="mailto:jonathaspereira673@gmail.com" aria-label="Email" className="text-gray-200 hover:text-red-600 transition-colors">
               <Mail size={20}  aria-label="Email"/>
             </a>
-            <a href="tel:+5514988168763" className="text-gray-200 hover:text-green-600 transition-colors">
+            <a href="tel:+5514988168763" aria-label="Telefone" className="text-gray-200 hover:text-green-600 transition-colors">
               <Phone size={20} aria-label="Telefone"/>
             </a>
           </div>
@@ -104,16 +104,16 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
             </nav>
             
             <div className="flex items-center space-x-4 mt-4 pt-4 border-t border-gray-200">
-              <a href="https://github.com/JHOW2004" target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-gray-900 transition-colors">
+              <a href="https://github.com/JHOW2004" target="_blank" aria-label="GitHub" rel="noopener noreferrer" className="text-gray-200 hover:text-gray-900 transition-colors">
                 <Github size={20} aria-label="GitHub" />
               </a>
-              <a href="https://www.linkedin.com/in/jonathas-pereira-gon%C3%A7alves-abb045211" target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-blue-600 transition-colors">
+              <a href="https://www.linkedin.com/in/jonathas-pereira-gon%C3%A7alves-abb045211" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-blue-600 transition-colors">
                 <Linkedin size={20} aria-label="LinkedIn" />
               </a>
-              <a href="mailto:jonathaspereira673@gmail.com" className="text-gray-200 hover:text-red-600 transition-colors">
+              <a href="mailto:jonathaspereira673@gmail.com" aria-label="Email" className="text-gray-200 hover:text-red-600 transition-colors">
                 <Mail size={20} aria-label="Email" />
               </a>
-              <a href="tel:+5514988168763" className="text-gray-200 hover:text-green-600 transition-colors">
+              <a href="tel:+5514988168763" aria-label="Telefone" className="text-gray-200 hover:text-green-600 transition-colors">
                 <Phone size={20} aria-label="Telefone" />
               </a>
             </div>

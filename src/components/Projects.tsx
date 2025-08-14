@@ -96,6 +96,7 @@ const Projects: React.FC = () => {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Carry"
                     className="flex items-center px-4 py-2 bg-[#E70149] text-white rounded-lg hover:bg-[#E70149]/80 transition-colors"
                   >
                     <ExternalLink className="w-4 h-4 mr-2" />
@@ -107,6 +108,7 @@ const Projects: React.FC = () => {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Github"
                     className="flex items-center px-4 py-2 border border-[#03E5FB] text-[#03E5FB] rounded-lg hover:bg-[#03E5FB] hover:text-black transition-colors"
                   >
                     <Github className="w-4 h-4 mr-2" />
@@ -137,6 +139,7 @@ const Projects: React.FC = () => {
             <div className="flex justify-center">
               <a
                 href="mailto:jonathaspereira673@gmail.com"
+                aria-label="Email"
                 className="px-8 py-3 bg-gradient-to-r from-[#E70149] to-[#03E5FB] text-white rounded-lg font-semibold hover:from-[#E70149]/90 hover:to-[#03E5FB]/90 transition-all transform hover:scale-105"
               >
                 Vamos conversar sobre seu projeto
