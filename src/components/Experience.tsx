@@ -10,7 +10,7 @@ const Experience: React.FC = () => {
       location: "Bauru, SP",
       description: [
         "Responsável por cuidar de todas a infraestrutura de software da empresa, desenvolvendo soluções internas para automatizar e simplificar processos",
-        "Criei diversos webapp para os alunos da instituição, para diversas finalidades, fazendo com que a experiência dos usuários fosse imersivas e agradável",
+        "Criei diversos WebApps para os alunos da instituição, para diversas finalidades, fazendo com que a experiência dos usuários fosse imersivas e agradável",
         "Tecnologias: React, React Native, Node, GraphQL, Laravel, Google Cloud, PostgreSQL, Python"
       ],
       current: true
@@ -21,7 +21,7 @@ const Experience: React.FC = () => {
       period: "Abril 2022 - Atual",
       location: "Bauru, SP",
       description: [
-        "Criei diversos webapps, aplicativos, ERPs e páginas estáticas para diversos clientes, sendo o maior deles o Sebrae no projeto ALI Academy",
+        "Criei diversos WebApps, aplicativos, ERPs e páginas estáticas para diversos clientes, sendo o maior deles o Sebrae no projeto ALI Academy",
         "Tecnologias: React, React Native, Next, Vite, Node, GraphQL, Google Cloud, AWS, Vercel, Oracle DB e SQL Server"
       ],
       current: true

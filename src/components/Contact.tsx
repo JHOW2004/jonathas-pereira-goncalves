@@ -1,5 +1,6 @@
 import React from "react";
 import { Mail, Phone, MapPin, Github, Linkedin, Building } from "lucide-react";
+import Whatsapp from "../../public/whatsapp.webp"
 
 const Contact: React.FC = () => {
   const handleSubmit = (event: React.FormEvent) => {
@@ -144,9 +145,12 @@ const Contact: React.FC = () => {
 
           {/* Contact Form */}
           <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
-              Envie uma Mensagem
-            </h3>
+            <div className="flex flex-row justify-center items-center  mb-6">
+              <h3 className="text-2xl font-bold text-gray-900">
+                Envie uma Mensagem
+              </h3>
+              <img src={Whatsapp} width={34} height={34} className="ml-2"/>
+            </div>
 
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid md:grid-cols-2 gap-6">

@@ -1,5 +1,6 @@
 import React from "react";
-import { ExternalLink, Github, Bot, Terminal, Package } from "lucide-react";
+import { ExternalLink, Github, Terminal, Package } from "lucide-react";
+import Carry from "../../public/Carry sem fundo.webp";
 
 const Projects: React.FC = () => {
   const projects = [
@@ -7,16 +8,11 @@ const Projects: React.FC = () => {
       title: "Carry AI",
       description:
         "Minha IA personalizada estilo ChatGPT, desenvolvida com tecnologias modernas para oferecer uma experiência conversacional inteligente e intuitiva.",
-      icon: <Bot className="w-8 h-8" />,
+      icon: <img src={Carry} width={40} height={40} />,
       link: "https://carrybr.vercel.app/",
       github: null,
-      technologies: [
-        "React",
-        "Node.js",
-        "TypeScript",
-        "Tailwind CSS",
-      ],
-      color: "from-[#E70149] to-[#E70149]/80",
+      technologies: ["React", "Node.js", "TypeScript", "Tailwind CSS"],
+      color: "bg-gray-800",
     },
     {
       title: "Carry CLI",

@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { MessageCircle, X, Send, Bot, User } from "lucide-react";
 import ReactMarkdown from "react-markdown";
+import Carry from "../../public/Carry sem fundo.webp"
 
 interface Message {
   id: string;
@@ -113,7 +114,8 @@ const ChatBot: React.FC = () => {
           <div className="flex items-center justify-between p-4 bg-gradient-to-r from-[#E70149] to-[#03E5FB] rounded-t-xl">
             <div className="flex items-center space-x-3">
               <div className="p-2 bg-white/20 rounded-full">
-                <Bot size={20} className="text-white" />
+              
+                <img src={Carry} width={20} height={20}/>
               </div>
               <div>
                 <h3 className="text-white font-semibold">Carry AI</h3>
@@ -148,10 +150,7 @@ const ChatBot: React.FC = () => {
                 >
                   <div className="flex items-start space-x-2">
                     {!message.isUser && (
-                      <Bot
-                        size={16}
-                        className="text-[#03E5FB] mt-1 flex-shrink-0"
-                      />
+                       <img src={Carry} width={16} height={16}/>
                     )}
                     {message.isUser && (
                       <User
