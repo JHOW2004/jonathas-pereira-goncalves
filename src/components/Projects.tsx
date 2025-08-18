@@ -8,7 +8,7 @@ const Projects: React.FC = () => {
       title: "Carry AI",
       description:
         "Minha IA personalizada estilo ChatGPT, desenvolvida com tecnologias modernas para oferecer uma experiência conversacional inteligente e intuitiva.",
-      icon: <img src={Carry} width={40} height={40} />,
+      icon: <img src={Carry} width={40} height={40} alt="Carry"/>,
       link: "https://carrybr.vercel.app/",
       github: null,
       technologies: ["React", "Node.js", "TypeScript", "Tailwind CSS"],

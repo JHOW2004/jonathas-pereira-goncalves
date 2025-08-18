@@ -149,7 +149,7 @@ const Contact: React.FC = () => {
               <h3 className="text-2xl font-bold text-gray-900">
                 Envie uma Mensagem
               </h3>
-              <img src={Whatsapp} width={34} height={34} className="ml-2"/>
+              <img src={Whatsapp} width={34} height={34} className="ml-2" alt="WhatsApp"/>
             </div>
 
             <form className="space-y-6" onSubmit={handleSubmit}>
