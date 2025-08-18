@@ -70,7 +70,7 @@ const About: React.FC = () => {
                 <Database className="text-orange-600" size={24} />
               </div>
               <h3 className="font-semibold text-gray-900 mb-2">Databases</h3>
-              <p className="text-gray-600 text-sm">PostgreSQL, MySQL, MongoDB</p>
+              <p className="text-gray-600 text-sm">PostgreSQL, MySQL, Oracle, MongoDB, Redis e mais</p>
             </div>
           </div>
         </div>
