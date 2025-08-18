@@ -25,7 +25,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
               src={Logo}
               alt="Jhow Technology Logo" 
               fetchpriority="high"
-              className="h-10 w-auto"
+              className="h-10 w-10"
             />
             <button
                 aria-label="Ir para a seção Sobre"

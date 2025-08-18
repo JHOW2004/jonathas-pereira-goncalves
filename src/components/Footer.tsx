@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
             <img 
               src={Logo}
               alt="Jhow Technology Logo" 
-              className="h-8 w-auto"
+              className="h-8 w-8"
             />
             <span className="text-xl font-bold">Jhow Technology</span>
           </div>
