@@ -108,7 +108,7 @@ const ChatBot: React.FC = () => {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-6 right-6 z-50 w-96 h-[500px] bg-gray-900 border border-gray-700 rounded-xl shadow-2xl flex flex-col">
+        <div className="fixed bottom-6 right-6 z-50 w-[330px] h-[500px] bg-gray-900 border rounded-xl shadow-2xl flex flex-col">
           {/* Header */}
           <div className="flex items-center justify-between p-4 bg-gradient-to-r from-[#E70149] to-[#03E5FB] rounded-t-xl">
             <div className="flex items-center space-x-3">
