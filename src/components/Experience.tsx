@@ -53,7 +53,7 @@ const Experience: React.FC = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-gradient-to-bl from-neutral-900 via-stone-950 to-black" role="experience">
+    <section id="experience" className="py-20 bg-gradient-to-bl from-neutral-900 via-stone-950 to-black" role="contentinfo">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-200 mb-6">
