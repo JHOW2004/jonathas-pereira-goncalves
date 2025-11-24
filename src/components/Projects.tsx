@@ -104,14 +104,14 @@ const Projects: React.FC = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-black">
+    <section id="projects" className="py-20 bg-black" role="projects">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Meus <span className="text-[#E70149]">Projetos</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-[#E70149] to-[#03E5FB] mx-auto mb-8"></div>
-          <p className="text-gray-100 text-lg max-w-3xl mx-auto">
+          <p className="text-white text-lg max-w-3xl mx-auto">
             Alguns dos projetos pessoais que desenvolvi, demonstrando minha
             paixão por inovação e tecnologia. Cada projeto representa uma
             solução única para problemas reais.
@@ -185,7 +185,7 @@ const Projects: React.FC = () => {
             </h3>
             <p className="text-gray-100 mb-6 leading-relaxed">
               Através da{" "}
-              <span className="text-[#E70149] font-semibold">
+              <span className="text-[#ff0051] font-bold">
                 Jhow Technology
               </span>
               , já desenvolvi dezenas de projetos para diversos clientes,

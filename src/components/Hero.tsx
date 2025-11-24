@@ -14,6 +14,7 @@ const Hero: React.FC = () => {
     <section
       id="home"
       className="min-h-screen flex items-center justify-center bg-gradient-to-br from-neutral-900 via-stone-950 to-black pt-20"
+      role="hero"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center">

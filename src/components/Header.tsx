@@ -17,7 +17,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-black backdrop-blur-sm shadow-sm z-40">
+    <header className="fixed top-0 left-0 right-0 bg-black backdrop-blur-sm shadow-sm z-40" role="header">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
