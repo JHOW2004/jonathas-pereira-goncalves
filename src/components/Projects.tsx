@@ -1,6 +1,14 @@
 import React from "react";
-import { ExternalLink, Github, Terminal, Package } from "lucide-react";
+import {
+  ExternalLink,
+  Github,
+  Terminal,
+  Package,
+  LucideFileCode2,
+  LucideBookOpen,
+} from "lucide-react";
 import Carry from "../../public/Carry sem fundo.webp";
+import TicoVsTeco from "../../public/TicoVsTeco.webp";
 
 const Projects: React.FC = () => {
   const projects = [
@@ -8,11 +16,54 @@ const Projects: React.FC = () => {
       title: "Carry AI",
       description:
         "Minha IA personalizada estilo ChatGPT, desenvolvida com tecnologias modernas para oferecer uma experiência conversacional inteligente e intuitiva.",
-      icon: <img src={Carry} width={40} height={40} alt="Carry"/>,
+      icon: <img src={Carry} width={40} height={40} alt="Carry" />,
       link: "https://carrybr.vercel.app/",
       github: null,
-      technologies: ["React", "Node.js", "TypeScript", "Tailwind CSS"],
+      technologies: [
+        "React",
+        "Node.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Prism Themes",
+        "Vite",
+      ],
       color: "bg-gray-800",
+    },
+    {
+      title: "Tico vs Teco",
+      description:
+        "Jogo da Velha arcade rankeado com três modos de jogo (Local, vs Bot com Gemini, e Online com salas), ranking e perfil integrados ao Firebase.",
+      icon: <img src={TicoVsTeco} width={40} height={40} alt="TicoVsTeco" />,
+      link: "https://tico-vs-teco.vercel.app",
+      github: null,
+      technologies: [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Gemini IA",
+        "Firebase Firestore",
+        "Firebase Authentication",
+        "Vite",
+      ],
+      color: "bg-gray-800",
+    },
+    {
+      title: "StudyFlow",
+      description:
+        "Uma plataforma de estudos para organizar seu cronograma de acordo com o tempo disponível e ajudá-lo a estudar com o material que você fornecer, usando geração de flashcards com inteligência artificial.",
+      icon: <LucideBookOpen className="w-8 h-8" />,
+      link: "https://study-flow-blue.vercel.app/",
+      github: null,
+      technologies: [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Gemini IA",
+        "Firebase Firestore",
+        "Firebase Authentication",
+        "Vite",
+      ],
+      color: "bg-[#2563eb]",
     },
     {
       title: "Carry CLI",
@@ -37,7 +88,18 @@ const Projects: React.FC = () => {
         "Image Processing",
         "Web APIs",
       ],
-      color: "from-[#E70149] to-[#03E5FB]",
+      color: "bg-[#F55501]",
+    },
+
+    {
+      title: "J-Code-Essentials",
+      description:
+        "JhowSnippets é uma extensão para o Visual Studio Code que oferece uma ampla variedade de trechos de código para aumentar a produtividade dos desenvolvedores. Com esse conjunto de trechos, você pode acelerar o desenvolvimento de projetos em JavaScript, SQL, HTML, CSS e React.",
+      icon: <LucideFileCode2 className="w-8 h-8" />,
+      link: null,
+      github: "https://github.com/JHOW2004/J-Code-Essentials/",
+      technologies: [],
+      color: "bg-[#5100FF]",
     },
   ];
 
