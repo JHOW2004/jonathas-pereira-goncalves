@@ -15,7 +15,7 @@ const About: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-lg text-gray-600 leading-relaxed">
-              Profissional na área de desenvolvimento de software há 3 anos, sendo todos voltados para o segmento de 
+              Profissional na área de desenvolvimento de software há 4 anos, sendo todos voltados para o segmento de 
               desenvolvimento mobile nativo e híbrido, desenvolvimento web e computação em nuvem.
             </p>
             

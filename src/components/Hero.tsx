@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
           </p>
 
           <p className="text-lg text-gray-500 mb-12 max-w-2xl mx-auto">
-            3 anos de experiência em desenvolvimento mobile nativo e híbrido,
+            4 anos de experiência em desenvolvimento mobile nativo e híbrido,
             desenvolvimento web e computação em nuvem
           </p>
 
