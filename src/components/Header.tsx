@@ -1,6 +1,6 @@
 import React from 'react';
 import { Menu, X, Github, Linkedin, Mail, Phone } from 'lucide-react';
-import Logo from "../../public/LOGO JHOW_Prancheta 1 cópia 6 1.webp"
+import Logo from "../../public/logo-jhow.webp"
 
 interface HeaderProps {
   isMenuOpen: boolean;
@@ -24,7 +24,6 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
             <img 
               src={Logo}
               alt="Jhow Technology Logo" 
-              fetchpriority="high"
               className="h-10 w-10"
             />
             <button

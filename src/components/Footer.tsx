@@ -1,6 +1,6 @@
 import React from 'react';
 import { Heart, Code } from 'lucide-react';
-import Logo from "../../public/LOGO JHOW_Prancheta 1 cópia 6 1.webp"
+import Logo from "../../public/logo-jhow.webp"
 
 const Footer: React.FC = () => {
   return (
