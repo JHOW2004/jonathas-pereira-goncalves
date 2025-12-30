@@ -32,9 +32,7 @@ const Projects: React.FC = () => {
     {
       title: "On News",
       description:
-        "OnNews é uma aplicação web moderna que combina o consumo de notícias em tempo real com interações sociais. Os usuários podem explorar as últimas manchetes, categorizar notícias, curtir, comentar e compartilhar artigos, além de interagir com perfis de outros usuários.
-
-O projeto é uma Progressive Web App (PWA), permitindo que seja instalado nativamente em dispositivos móveis e desktops.",
+        "OnNews é uma aplicação web moderna que combina o consumo de notícias em tempo real com interações sociais. Os usuários podem explorar as últimas manchetes, categorizar notícias, curtir, comentar e compartilhar artigos, além de interagir com perfis de outros usuários. O projeto é uma Progressive Web App (PWA), permitindo que seja instalado nativamente em dispositivos móveis e desktops.",
       icon: <img src={OnNews} width={40} height={40} alt="OnNews" />,
       link: "https://on-news.vercel.app/",
       github: "https://github.com/JHOW2004/On-News",
