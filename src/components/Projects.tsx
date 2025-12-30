@@ -8,7 +8,7 @@ import {
   LucideBookOpen,
 } from "lucide-react";
 import Carry from "../../public/Carry sem fundo.webp";
-import TicoVsTeco from "../../public/TicoVsTeco.webp";
+import OnNews from "../../public/logoSF.webp";
 
 const Projects: React.FC = () => {
   const projects = [
@@ -30,17 +30,18 @@ const Projects: React.FC = () => {
       color: "bg-gray-800",
     },
     {
-      title: "Tico vs Teco",
+      title: "On News",
       description:
-        "Jogo da Velha arcade rankeado com três modos de jogo (Local, vs Bot com Gemini, e Online com salas), ranking e perfil integrados ao Firebase.",
-      icon: <img src={TicoVsTeco} width={40} height={40} alt="TicoVsTeco" />,
-      link: "https://tico-vs-teco.vercel.app",
-      github: null,
+        "OnNews é uma aplicação web moderna que combina o consumo de notícias em tempo real com interações sociais. Os usuários podem explorar as últimas manchetes, categorizar notícias, curtir, comentar e compartilhar artigos, além de interagir com perfis de outros usuários.
+
+O projeto é uma Progressive Web App (PWA), permitindo que seja instalado nativamente em dispositivos móveis e desktops.",
+      icon: <img src={OnNews} width={40} height={40} alt="OnNews" />,
+      link: "https://on-news.vercel.app/",
+      github: "https://github.com/JHOW2004/On-News",
       technologies: [
         "React",
         "TypeScript",
         "Tailwind CSS",
-        "Gemini IA",
         "Firebase Firestore",
         "Firebase Authentication",
         "Vite",
